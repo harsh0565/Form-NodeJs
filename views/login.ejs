@@ -2,27 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login page</title>
     <link rel="stylesheet" href="styles.css" />
-    <title>Login</title>
   </head>
   <body>
-    <main>
-      <form method="post" action="/login">
-        <h1>Login Now</h1>
-        <input
+
+    <div class="elements name">
+      <form> 
+        <button><a href="register">Register</a></button>
+      </form>
+    </div>
+    
+    <div class="box">
+      <div class="elements untoldcoding"></div>
+      <div class="elements name">
+        <h2>Login Page</h2>
+      </div>
+      <div class="elements content">
+        <form method="post" action="/login">
+          <input
           type="email"
           name="email"
           placeholder="Email"
           value="<%=locals.email%>"
+          required
         />
-        <input type="password" name="password" placeholder="Password" />
+          <input type="password" name="password" placeholder="Password" required/>
 
-        <p class="error"><%= locals.message %></p>
+          <button type="submit">Log In</button>
 
-        <button type="submit">Log In</button>
-      </form>
-    </main>
-  </body>
+        </form>
+      </div>
+      <div class="card"></div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/
+vanilla-tilt.min.js"></script>
+    
+</body>
 </html>
+
+
